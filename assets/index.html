@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Agile PDX</title>
+        
+        <link rel="stylesheet" type="text/css" href="main.css"/>
+        
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"></script>
+    </head>
+    <body>
+    	<div class="topbar"></div>
+    	<div class="background"></div>
+        <div class="main">
+
+			<div class="header">
+				<p style="margin-top: 0px;">Hello! Welcome!</p>
+			</div>
+			<div class="sidebar">
+			<!-- would prefer to use this search term:
+				http://search.twitter.com/search.atom?geocode=45.523875%2C-122.670399%2C50.0mi&q=+agile+near%3Aportland+within%3A50mi
+				-->
+				<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+				<script src="twitter-widget-config.js"></script>
+				<p>
+					<a href="http://www.twitter.com/agilepdx"><img src="http://twitter-badges.s3.amazonaws.com/follow_us-b.png" alt="Follow agilepdx on Twitter" border="0"/></a>
+				</p>
+			</div>
+			<div style="clear: left;"></div>
+		  
+		  <div class="content">            
+            <h2 class="title">Agile PDX Meetings</h2>
+            <div class="inner">
+              <a rel="calendar" type="application/json" href="http://calagator.org/events/search.json?tag=agilepdx">Loading...</a>
+			</div>
+            <h2 class="title">Local Agile Activity</h2>
+            <div class="inner">
+              <a rel="calendar" type="application/json" href="http://calagator.org/events/search.json?tag=agile">Loading...</a>
+            </div>
+          </div>
+
+        </div>
+    </body>
+    <script type="text/javascript" src="strftime.js"></script>
+    <script type="text/javascript" src="calagator_widget.js"></script>
+</html>

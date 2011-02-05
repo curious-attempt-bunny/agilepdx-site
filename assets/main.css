@@ -1,0 +1,71 @@
+body {
+    color: #333333;
+    font: 13px/20px "Lucida Grande",Arial,Sans-serif;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background-color: #90cf79;
+	margin: 0px;
+}
+
+h1 {
+	color: #D33381;
+	border-bottom: black 3px dotted;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+div.header {
+	background-image: url("small logo.png");
+	background-repeat: no-repeat;
+	padding-left: 138px;
+	padding-top: 5px;
+	height: 110px;
+	float: left;
+}
+
+div.sidebar {
+	float: right;
+}
+
+div.topbar {
+	width: 100%;
+	height: 48px;
+	background: -moz-linear-gradient(center top, #333333, #111111) repeat scroll 0 0 transparent;
+	z-index:1;
+}
+
+div.background {
+	position:absolute;
+	top:0px;
+	width:100%;
+	height:300px;
+	z-index:-1;
+	background: -moz-linear-gradient(center top, #aee997, #90cf79) repeat scroll 0 0 transparent;
+}
+
+div.main {
+	background-color: white;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 940px;
+	margin-right: auto;
+	margin-left: auto;
+	border: 1px solid gray;	
+	margin-top: 20px;
+	margin-bottom: 20px;	
+	z-index:1;
+}
+
+div.content {
+	strftime.js
+}
+
+p.description {
+	display: none;
+}
