@@ -19,11 +19,6 @@ h3 {
 }
 
 div.header {
-	background-image: url("small logo.png");
-	background-repeat: no-repeat;
-	padding-left: 138px;
-	padding-top: 5px;
-	height: 130px;
 	float: left;
 }
 
