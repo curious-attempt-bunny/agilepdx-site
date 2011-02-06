@@ -43,23 +43,26 @@ var Calagator = {
                 item.start_time = item.parse_date(data.start_time);
                 item.end_time   = item.parse_date(data.end_time);
                 item.calendar = calendar;
-                item.calendar.container.append('<div class="vevent">' + item.summary() + item.start_and_end() + item.venue() + item.description() + '</div>');
+                item.calendar.container.append('<li class="vevent">' + '<a href="'+item.link()+'" target="_blank">'+item.summary() + "</a> &ndash; " + item.start_and_end() + item.venue() + item.description() + '</li>');
                 item.calendar.events.push(this);
               }
             },
+    link: function() {
+    			return 'http://calagator.org/events/'+this.data.id;
+    		},
     summary: function() {
-               return '<h3 class="summary title">' + this.data.title + '</h3>';
+    	   	   var title = this.data.title;
+    	   	   if (title.indexOf(" - Agile PDX") > -1) {
+    	   	     title = title.substring(0, title.indexOf(" - Agile PDX"))
+    	   	   }
+               return '<span class="summary">' + title + '</span>';
              },
     print_start_time: function() {
-                  var pretty_time = this.start_time.strftime('%A, %B %d from %I:%M %P');
-                  return '<abbr style="border:none" class="dtstart" title="' + this.iso8601(this.start_time) + '">' + pretty_time + '</abbr>';
+                  var pretty_time = this.start_time.strftime('%A, %B %d');
+                  return ' <abbr style="border:none" class="dtstart" title="' + this.iso8601(this.start_time) + '">' + pretty_time + '</abbr>';
                 },
-    print_end_time: function() {
-                var pretty_time = this.end_time.strftime('%I:%M %P');
-                return '<abbr style="border:none" class="dtend" title="' + this.iso8601(this.end_time) + '">' + pretty_time + '</abbr>';
-              },
     start_and_end: function() {
-                     return '<span class="date">' + this.print_start_time() + ' &ndash; ' + this.print_end_time() + '</span>';
+                     return '<span class="date">' + this.print_start_time() + '</span>';
                    },
     venue: function() {
              return '<a rel="venue" type="application/json" href="' + this.data.venue_id + '" />';
