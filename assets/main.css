@@ -60,6 +60,7 @@ div.main {
 
 div.content {
 	width: 670px;
+	float: left;
 }
 
 p.description {
