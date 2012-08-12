@@ -1,7 +1,7 @@
 new TWTR.Widget({
   version: 2,
   type: 'search',
-  search: '(agile pdx) OR agilepdx  near:portland',
+  search: '(agile pdx) OR agilepdx',
   interval: 6000,
   title: 'search: agile pdx',
   subject: 'Agile PDX Buzz',
